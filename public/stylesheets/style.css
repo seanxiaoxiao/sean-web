@@ -6736,4 +6736,4 @@ footer span {
 	cursor: pointer;
 }
 /* End: Postroll */
-.backdrop{background-image:url('../images/splash.jpg')}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx){.backdrop{background-image:url("http://nanc-photo.qiniudn.com/Background@2x.jpg");background-size:auto auto}}
+.backdrop{background-image:url('../images/splash.jpg')}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-resolution: 1.5dppx){.backdrop{background-image:url("../images/splash.jpg");background-size:auto auto}}
