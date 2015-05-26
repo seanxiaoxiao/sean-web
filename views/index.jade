@@ -1,0 +1,26 @@
+doctype html
+head
+  // Document Settings
+  meta(charset='UTF-8')
+  meta(name='viewport', content='width=device-width, initial-scale=1')
+  link(rel='icon', type='image/png', href='http://placehold.it/16x16')
+  // Page Title
+  title Sean Xiao
+  include header_include
+body
+  script(src='/javascripts/loader.js')
+
+  .home-slider
+    include header
+
+    .wrapper
+      #boxgallery.boxgallery(data-effect='effect-1')
+        #background.panel-slider.backdrop
+        .slider-content
+          h1 Sean Xiao
+          h4 Yet Another Programmer
+  a#to-top
+    i.fa.fa-angle-up
+  include bottom_include
+  script.
+    new BoxesFx(document.getElementById('boxgallery'));

@@ -1,0 +1,40 @@
+//
+   Created by xiaoxiao on 3/4/15.
+
+doctype html
+html
+  head
+    // Document Settings
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='icon', type='image/png', href='http://placehold.it/16x16')
+    // Page Title
+    title #{ title }
+    include header_include
+  body
+    script(src='/javascripts/loader.js')
+    include header
+
+    .wrapper
+      .home-salvattore
+        .container.salvattore-projects
+          each album, i in gallery.albums
+            if (i % 3 == 0)
+              .row
+            .col-md-4
+              .project-con
+                a(href='javascript:void(0);')
+                  .overlay
+                    .overlay-inner
+                      h3 #{ album.name }
+                      hr
+                      span #{ gallery.name }
+                  img(src='http://nanc-photo.qiniudn.com/album-#{ gallery.name.toLowerCase() }-covercover-#{ album.cover }.png', alt='')
+
+
+    footer
+      .container
+        span 2015 © NanC Photo. All rights Reserved.
+    a#to-top
+      i.fa.fa-angle-up
+    include bottom_include
