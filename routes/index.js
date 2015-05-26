@@ -8,9 +8,14 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/projects.html', function(req, res, next) {
-    var name = req.params.name;
     var projects = data.allProjects();
     res.render('projects', { title: "Projects", projects: projects });
+});
+
+router.get('/projects/{ projectId }.html', function(req, res, next) {
+    var projectId = req.params.projectId;
+    var project = data.findProject(projectId);
+    res.render('project', { title: project.name, project: project });
 });
 
 module.exports = router;
