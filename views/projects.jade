@@ -18,23 +18,23 @@ html
     .wrapper
       .home-salvattore
         .container.salvattore-projects
-          each album, i in gallery.albums
+          each project, i in projects
             if (i % 3 == 0)
               .row
             .col-md-4
               .project-con
-                a(href='javascript:void(0);')
+                a(href='/projects/#{ project.name }.html')
                   .overlay
                     .overlay-inner
-                      h3 #{ album.name }
+                      h3 #{ project.name }
                       hr
-                      span #{ gallery.name }
-                  img(src='http://nanc-photo.qiniudn.com/album-#{ gallery.name.toLowerCase() }-covercover-#{ album.cover }.png', alt='')
+                      span #{ project.name }
+                  img(src='/images/projects/#{ project.id }.jpg', alt='')
 
 
     footer
       .container
-        span 2015 © NanC Photo. All rights Reserved.
+        span 2015 © Sean Xiao. All rights Reserved.
     a#to-top
       i.fa.fa-angle-up
     include bottom_include

@@ -4,14 +4,13 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
-  res.render('index');
+    res.render('index');
 });
 
-router.get('/gallery/(:name).html', function(req, res, next) {
+router.get('/projects.html', function(req, res, next) {
     var name = req.params.name;
-    var gallery = data.findGallery(name);
-    res.render('gallery', { gallery: gallery, title: name, galleries: data.allGalleries() });
+    var projects = data.allProjects();
+    res.render('projects', { title: "Projects", projects: projects });
 });
 
 module.exports = router;
