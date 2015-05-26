@@ -1,0 +1,35 @@
+//
+   Created by xiaoxiao on 5/25/15.
+
+doctype html
+html
+   head
+      // Document Settings
+      meta(charset='UTF-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      link(rel='icon', type='image/png', href='http://placehold.it/16x16')
+      // Page Title
+      title #{ title }
+      include header_include
+   body
+      script(src='/javascripts/loader.js')
+      include header
+      .header-img.header-project(style='background-image: url(/images/projects/#{project.id}-backdrop.jpg)')
+      .wrapper
+         .container
+            .single-project-con
+               h3 #{project.name}
+               | &#x9;&#x9;&#x9;&#x9;&#x9;
+               p
+                  | #{project.desc}
+               | &#x9;&#x9;&#x9;&#x9;&#x9;
+               .button
+                  a(href='#{project.link}', target='_blank') Download now
+            | &#x9;&#x9;&#x9;&#x9;
+
+   footer
+      .container
+         span 2015 © Sean Xiao. All rights Reserved.
+   a#to-top
+      i.fa.fa-angle-up
+   include bottom_include

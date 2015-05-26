@@ -12,10 +12,14 @@ router.get('/projects.html', function(req, res, next) {
     res.render('projects', { title: "Projects", projects: projects });
 });
 
-router.get('/projects/{ projectId }.html', function(req, res, next) {
+router.get('/projects/(:projectId).html', function(req, res, next) {
     var projectId = req.params.projectId;
     var project = data.findProject(projectId);
-    res.render('project', { title: project.name, project: project });
+    if (project == null) {
+        res.render(404);
+    } else {
+        res.render('project', {title: project.name, project: project});
+    }
 });
 
 module.exports = router;
